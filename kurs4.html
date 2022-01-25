@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .border-start {
+            border-left: none !important;
+        }
+
+        .textModule {
+            display: none
+        }
+
+        @media (min-width: 576px) {
+            .textModule {
+                display: block;
+            }
+
+            .border-start {
+                border-left: 3px solid rgb(1 6 12) !important;
+            }
+        }
+
+        .textModule {
+            height: 100vh;
+        }
+       .hidden {
+           text-align:left;
+       }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand pt-0 pb-0" href="#">
+                <img src="./images/SmrtLogo.png" alt="" width="150" height="45" class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-light border-bottom border-dark border-2">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1" style="margin-left:10px;">Обучение по охране труда</span>
+        </div>
+    </nav>
+
+    <div class="jsonContent">
+
+        <div class="col-12 col-md-9  col-sm-8 col-xl-10 border-start border-dark border-3 textModule">
+            <div class="col d-block d-sm-none" style="height:100%">
+                <div class="d-grid gap-2" style="height:100%">
+                    <button class="btn btn-light shadow p-3 rounded  btnModuleBack text-start" type="button"><p style="margin-top:-250px;">Модуль1 </p></button>
+                </div>
+            </div>
+            <div class="col d-none d-sm-block">
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+    <script>
+
+
+        var data = {
+
+            Title: 'Обучение по охране труда для руководителей и специалистов организаций',
+            Parts: [
+                {
+                    Id: '1', Title: 'Тема 1. Основы охраны труда',
+
+                    Modules: [
+                        {
+                            Id: '1', Title: 'Тема 1. Основные положения трудового права',
+                            Groups: [
+                                {
+                                    Title: 'Описание курса 1-1',
+                                    Items: [
+                                        { Type: 'text', DisplayMode: 'readonly', Title: 'Описание курса 1-1', Html:'<p><strong>Описание курса:&nbsp;</strong>Курс предназначен для прохождения обучения по охране труда руководителей предприятий и организаций, их заместителей, руководителей и специалистов служб охраны труда, инженерно-технических работников организаций и предприятий, а также членов комиссий по проверке знаний требований охраны труда и уполномоченных лиц по охране труда профессиональных союзов.</p>', Url: 'http://' },
+                                        { Type: 'url', DisplayMode: 'modal', Title: 'Основные положения трудового права', Url: 'http://' }]
+                                }]
+                        },
+                        {
+                            Id: '2', Title: 'Тема 1.Правовые основы охраны труда',
+                            Groups: [
+                                {
+                                    Title: 'Описание курса 1-2',
+                                    Items: [
+                                        { Type: 'text', DisplayMode: 'readonly', Title: 'Описание курса 1-2', Html: '<p><strong>Описание курса 1-2:&nbsp;</strong>Курс предназначен для прохождения обучения по охране труда руководителей предприятий и организаций, их заместителей, руководителей и специалистов служб охраны труда, инженерно-технических работников организаций и предприятий, а также членов комиссий по проверке знаний требований охраны труда и уполномоченных лиц по охране труда профессиональных союзов.</p>', Url: 'http://' },
+                                        { Type: 'url', DisplayMode: 'modal', Title: 'Основные положения трудового права', Url: 'http://' }]
+                                }]
+                        },
+                        {
+                            Id: '3', Title: 'Тема 1.Государственное регулирование в сфере охраны труда',
+                            Groups: [
+                                {
+                                    Title: 'Описание курса 1-3',
+                                    Items: [
+                                        { Type: 'text', DisplayMode: 'readonly', Title: 'Описание курса 1-3', Html: '<p><strong>Описание курса 1-3:&nbsp;</strong>Курс предназначен для прохождения обучения по охране труда руководителей предприятий и организаций, их заместителей, руководителей и специалистов служб охраны труда, инженерно-технических работников организаций и предприятий, а также членов комиссий по проверке знаний требований охраны труда и уполномоченных лиц по охране труда профессиональных союзов.</p>', Url: 'http://' },
+                                        { Type: 'url', DisplayMode: 'modal', Title: 'Основные положения трудового права', Url: 'http://' }]
+                                }]
+                        }
+
+                    ]
+                },
+                {
+                    Id: '2', Title: 'Тема 2. Основы управления охраной труда в организации',
+
+                    Modules: [
+                        {
+                            Id: '1',
+                            Title: 'Тема 2.Обязанности работника и работодателя в области охраны труда',
+                            Groups: [
+                                {
+                                    Title: 'Описание курса2-1',
+                                    Items: [
+                                        { Type: 'text', DisplayMode: 'readonly', Title: 'Описание курса 2-1', Html: '<p><strong>Описание курса 2-1:&nbsp;</strong>Курс предназначен для прохождения обучения по охране труда руководителей предприятий и организаций, их заместителей, руководителей и специалистов служб охраны труда, инженерно-технических работников организаций и предприятий, а также членов комиссий по проверке знаний требований охраны труда и уполномоченных лиц по охране труда профессиональных союзов.</p>', Url: 'http://' },
+                                        { Type: 'url', DisplayMode: 'modal', Title: 'Основные положения трудового права', Url: 'http://' }]
+                                }]
+
+                        },
+                        {
+                            Id: '2',
+                            Title: 'Тема 2.Организация системы управления охраной труда',
+                            Groups: [
+                                {
+                                    Title: 'Описание курса 2-2',
+                                    Items: [
+                                        { Type: 'text', DisplayMode: 'readonly', Title: 'Описание курса 2-2', Html: '<p><strong>Описание курса 2-2:&nbsp;</strong>Курс предназначен для прохождения обучения по охране труда руководителей предприятий и организаций, их заместителей, руководителей и специалистов служб охраны труда, инженерно-технических работников организаций и предприятий, а также членов комиссий по проверке знаний требований охраны труда и уполномоченных лиц по охране труда профессиональных союзов.</p>', Url: 'http://' },
+                                        { Type: 'url', DisplayMode: 'modal', Title: 'Основные положения трудового права', Url: 'http://' }]
+                                }]
+                        }
+                    ]
+                }
+            ]
+        };
+
+
+
+        $(function () {
+            createMenu(data);
+        })
+
+        function createMenu(data) {
+            let content = '';
+            let nav = '';
+            let container = '';
+            let row = '';
+            let module = '';
+            let textModule = '';
+            let moduleTwo = '';
+            let battonGroupTwo = '';
+            let rightBlock = '';
+            let collapseBlock = '';
+            let cards = '';
+            let jsonConetnt = $('.jsonContent');
+            let cnt = 0;
+            
+
+            nav = '<nav class="navbar navbar-light"><div class="container-fluid text-center"><span class="navbar-brand mb-0 h1 text-wrap" style="margin-left:10px;">' + data.Title + '</span></div></nav>';
+            container = '<div class="container-fluid">'
+            row = '<div class="row">'
+            module = '<div class="col-12 col-sm-4 col-md-3 col-xl-2 blockModule" style = "padding-left:23px">'
+            textModule = '<div  class="col-12 col-md-9  col-sm-8 col-xl-10 border-start border-dark border-3 textModule">'
+            moduleTwo = '<div class="col d-block d-sm-none" style="height:100%">'
+            battonGroupTwo = '<div class="d-grid gap-2" style="height:100%"><button class="btn btn-light shadow p-3 rounded  btnModuleBack" type="button" style="margin-block-end: auto;"><p class="moduleBack"></p>'
+            rightBlock = '<div class="col d-none d-sm-block">'
+            collapseBlock = '<div class="collapse" id="collapseExample">'
+            cards = '<div class="card card-body">'
+
+            content += nav;
+
+
+            data.Parts.forEach(function (val) {
+
+                let part = '';
+                let moduleBtn = '';
+                let battonGroup = '';
+                let cardsText = '';
+                
+
+                part = '<div class="col col-sm-12"><p class="fs-5">' + val.Title + '</p></div>';
+
+                battonGroup = '<div class="d-grid gap-2">'
+
+                val.Modules.forEach(function (val) {
+                    moduleBtn += '<button id=' + ++cnt + ' class="btn btn-light shadow p-3 rounded  btnModule" type="button" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">' + val.Title 
+                    
+                    val.Groups.forEach(function (val) {
+                       
+                        val.Items.forEach(function (val) {
+
+                            switch (val.Type) {
+                                case 'text':
+                                    cardsText += '<div class="hidden" data-id="' + cnt + '">' + val.Html + '<a href="' + val.Url + '">Ссылка</a></div>';
+                                    break;
+                        
+                                case 'url':
+                                    cardsText += '<div class="hidden" data-id="' + cnt + '">' +val.Title + '<br><a href="' + val.Url + '">Cсылка</a></div>';
+                                    break;
+                            }
+
+                        })
+                    })
+                })
+
+                
+
+                battonGroup += moduleBtn;
+                part += battonGroup;
+                module += part + '</div>';
+                cards += cardsText;
+                battonGroupTwo += cardsText;
+
+            });
+
+            moduleTwo += battonGroupTwo + '</div>' + '</div>';
+            textModule += moduleTwo;
+            
+            
+            collapseBlock += cards;
+            rightBlock += collapseBlock;
+            textModule += rightBlock;
+            row += module + '</div>';
+            row += textModule;
+            container += row;
+            content += container;
+
+            jsonConetnt.html(content);
+
+           
+
+            $('.btnModule').click(function () {
+                var battonTitle = this.innerHTML
+                $('.moduleBack').html(battonTitle)
+              
+                if ($(window).width() < 576) {
+                    $(".blockModule").hide();
+                    $('.textModule').show();
+                   
+                }
+
+                var attr = $(this).attr('id');
+                $('.hidden').hide();
+
+                $('.hidden').each(function () {
+                    var attrText = $(this).attr('data-id');                    
+                    if (attrText === attr) {
+                        console.log(attrText);
+                        console.log(attr);
+
+                        $(this).show();
+                    } 
+                });
+            })
+            $('.btnModuleBack').click(function () {
+                if ($(window).width() < 576) {
+                    $(".blockModule").show();
+                    $('.textModule').hide();
+                }
+            })
+        }
+
+        console.log(data.Parts[0].Modules[0].Groups[0].Items[0].Html)
+
+    </script>
+</body>
+</html>
